@@ -1,0 +1,158 @@
+<style>
+.nav-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: flex-end;
+  width: auto;
+  height: auto;
+  position: fixed;
+  z-index: 8;
+  bottom: -60px;
+  right: 0px;
+  padding: 5px;
+  margin: 0px;
+}
+@media (max-width: 360px) {
+  .nav-bottom {
+    width: 320px;
+  }
+}
+
+  -webkit-box-shadow: 1px 1px 6px 0px rgba(68, 68, 68, 0.705);
+  -moz-box-shadow: 1px 1px 6px 0px rgba(68, 68, 68, 0.705);
+  box-shadow: 1px 1px 6px 0px rgba(68, 68, 68, 0.705);
+}
+
+.circle-anime {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-content: center;
+  width: 60px;
+  height: 60px;
+  top: 15px;
+  right: 15px;
+  border-radius: 50%;
+  transition: .3s;
+  background-color: #77bb4a;
+  animation: pulse 1.2s 4.0s ease 4;
+}
+
+.popup-info {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  bottom: 85px;
+  right: 6px;
+  transition: .5s;
+  border-radius: 10px;
+  background-color: white;
+  /* offset-x > | offset-y ^| blur-radius | spread-radius | color */
+  -webkit-box-shadow: 2px 1px 6px 0px rgba(68, 68, 68, 0.705);
+  -moz-box-shadow: 2px 1px 6px 0px rgba(68, 68, 68, 0.705);
+  box-shadow: 2px 1px 6px 0px rgba(68, 68, 68, 0.705);
+  animation: slideInRight .6s 0.0s both;
+}
+.popup-info > div {
+  margin: 5px;
+}
+@media (max-width: 680px) {
+  .popup-info p {
+    font-size: 0.9em;
+  }
+}
+.popup-info > .content-info.-top {
+  display: flex;
+  flex-direction: column;
+}
+.popup-info > .content-info.-top p {
+  color: #585858;
+  font-family: 'Roboto';
+  font-weight: 20;
+  font-size: 1.0em;
+}
+.popup-info > .content-info.-bottom {
+  display: flex;
+  flex-direction: row;
+}
+
+.CloseInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  margin: -10px 0px 5px 0px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #f76060;
+  -webkit-box-shadow: 1px 1px 2px 0px rgba(68, 68, 68, 0.705);
+  -moz-box-shadow: 1px 1px 2px 0px rgba(68, 68, 68, 0.705);
+  box-shadow: 1px 1px 2px 0px rgba(68, 68, 68, 0.705);
+}
+.CloseInfo:hover {
+  background-color: #f71d1d;
+  transition: .3s;
+}
+
+.is-active-info-popup {
+  display: flex;
+  animation: slideInRight .6s 0.0s both;
+}
+
+</style>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<div class="nav-bottom">
+            <div class="popup-info fadeIn">
+                <div class="content-info -top"><button type="button" class="CloseInfo">
+                      <i style="color:white" class="material-icons icon-font-color">close</i>
+                    </button>
+                    <p style="margin:0 -6px -15px -6px;">	<a href="https://rumahpulsaid.jualan.me" target="_blank"><img src="https://kiosscriptcode.files.wordpress.com/2022/04/6688164.png" alt="banner" width="200" height="200"/></a></p>
+                </div>
+                <div class="content-info -bottom">
+
+                    <div class="send-msPopup" id="send-btn" type="button">
+                    </div>
+
+                </div>
+            </div>
+            <div type="button" id="whats-openPopup" class="info-button">
+            </div>
+            <div class="circle-anime"></div>
+        </div>
+
+      <script id="rendered-js" >
+popupInfo = () => {
+
+  let btnCloseInfo = document.querySelector('.CloseInfo');
+  let btnOpenPopup = document.querySelector('.info-button');
+  let popup = document.querySelector('.popup-info');
+  let sendBtn = document.getElementById('send-btn');
+
+  btnCloseInfo.addEventListener("click", () => {
+    popup.classList.toggle('is-active-info-popup');
+  });
+
+  btnOpenPopup.addEventListener("click", () => {
+    popup.classList.toggle('is-active-info-popup');
+    popup.style.animation = "fadeIn .6s 0.0s both";
+  });
+
+  setTimeout(() => {
+    popup.classList.toggle('is-active-info-popup');
+  }, 3000);
+};
+
+popupInfo();
+//# sourceURL=pen.js
+    </script>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FAQ</title>
+</head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+
+  /*//import google font*/
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap');
+  body {
+    font-family: 'Baloo Bhaijaan 2', cursive;
+  }
+
+  .container-fluid {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+
+  }
+
+.container-fluid h2 {
+    color: black;
+    position: relative;
+    width: 20rem;
+  }
+
+  .container-fluid h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 12px;
+    width: 67px;
+    height: 2px;
+    background-color: hotpink;
+
+  }
+
+  .accordion15{
+    width: 100%;
+    padding: 0 5px;
+    border: 2px solid #26A69A;
+    cursor: pointer;
+    border-radius: 50px;
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+  }
+
+  .icon {
+    margin: 0 10px 0 0;
+    width: 20px;
+    height: 20px;
+    background: url(panah.png) no-repeat 8px 7px #26A69A;
+    border-radius: 50px;
+    float: left;
+    transition: all .5s ease-in;
+  }
+
+  .accordion15 h4 {
+    font-size: 14px;
+    margin: 0;
+    padding: 3px 0 0 0;
+    font-weight: normal;
+    color: #26A69A;
+  }
+
+  .panel {
+    padding: 0 15px;
+    border-left: 1px solid #26A69A;
+    margin-left: 25px;
+    font-size: 14px;
+    overflow: hidden;
+    max-height: 0;
+    transition: all .5s ease-in;
+  }
+
+  ul {
+    font-size: 15px;
+  }
+
+</style>
+<body>
+
+<div class="container-fluid">
+  <h2>Pertanyaan Sering Di Tanyakan</h2>
+  <div class="accordion15">
+    <div class="icon"></div>
+    <h4>Produk Apa Saja Yang Tersedia Di Rumah Pulsa?</h4>
+  </div>
+  <div class="panel">
+    <h3>Tersedia :</h3>
+    <ul>
+      <li>Pulsa Reguler All Operator</li>
+      <li>Paket Data All Operator</li>
+      <li>Token PLN</li>
+      <li>Listrik Pascabayar</li>
+      <li>Top Up Game (Mobile Legends, PUBG Mobile, Free Fire, Sausageman)</li>
+      <li>Top Up E-Wallet (DANA, OVO, ShopeePay)</li>
+      <li>Voucher digital (Steam Wallet, GooglePlay, Garenashell)</li>
+    </ul>
+  </div>
+
+  <div class="accordion15">
+    <div class="icon"></div>
+    <h4>Apkah Bertransaksi Di Rumah Pulsa Aman?</h4>
+  </div>
+  <div class="panel">
+    <ul>
+      <li>Transaski Di Rumah Pulsa Sudah Pasti Aman Dan Garansi Uang Kembali Apabilah Transaksi Gagal</li>
+      <li>Proses Pengiriman Produk Cepat Hitungan Detik & Paling Lama H+1  Jika Terdapat Kendala Dari Operator tujuan</li>
+      <li>Saldo Yang Terpotong Otomatis Di Kembalikan Jika Transaksi Gagal</li>
+    </ul>
+  </div>
+
+  <div class="accordion15">
+    <div class="icon"></div>
+    <h4>Cara Melakukan Top Up Saldo Di Rumah Pulsa?</h4>
+  </div>
+  <div class="panel">
+   <ul>
+     <li>Buka Aplikasi Rumah Pulsa Di Hp Kalian</li>
+     <li>Klik Tombol Yang Bertuliskan Top Up</li>
+     <li>Pilih Jumlah Top Up Yang Di Inginkan</li>
+     <li>Terdapat Berbagai Metode Pembayaran Yang Bisa Di Pilih Untuk Melakukan Top Up (Bank Permata, LinkAja, DANA, OVO, Gopay, Qris)</li>
+     <li>Lakukan Transfer Ke Salah Satu Metode Pembayaran Tersebut Sesuai Jumlah Yang Tertera</li>
+     <li>Setelah Lakukan Transfer Kembali Ke Menu Top Up Dan Pilih Konfirmasi Pembayaran</li>
+     <li>Masukan Nama Pengirim dan Bukti Transafer Nya (Berupa Foto / Screenshot)</li>
+     <li>Selesai, Reload Applikasi Tuameko Cell Untuk Melihat Hasilnya, Apakah Saldonya Sudah Masuk Atau Belum</li>
+     <li>Apabila Terdapat Kendala Silahkan Hubungi Admin Pada Menu Admin</li>
+   </ul>
+  </div>
+</div>
+
+<script type="text/javascript">
+  var acc = document.getElementsByClassName("accordion15");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight +  'px';
+    }
+  });
+}
+</script>
+
+</body>
+</html>
+

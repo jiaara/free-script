@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Top Up Otomatis</title>
+
+    <style>
+    html {
+        font-family: GillSans, Calibri, Trebuchet, sans-serif;
+    }
+    </style>
+</head>
+<body>
+
+    
+<div class="container">
+    <div class="card z-depth-4">
+        <div class="card-content">
+            <h5 class="btn purple darken-4" style="width:100%;"  id="judul"></h5>
+            <h6>Jumlah: <i class="material-icons">arrow_downward</i></h6>
+            <div class="row">
+              
+                    <div class="col s6">
+                        <input name="jlh" onclick="ajlh()" type="radio" id="jlh1" value="25,000" checked class="with-gap"/>
+                        <label for="jlh1">Rp. 25.000,-</label>
+                        
+                        <input name="jlh"  onclick="ajlh()" type="radio" id="jlh2" value="50,000" class="with-gap"/>
+                        <label for="jlh2">Rp. 50.000,-</label>
+                        
+                        <input name="jlh"  onclick="ajlh()" type="radio" id="jlh3" value="100,000" class="with-gap"/>
+                        <label for="jlh3">Rp. 100.000,-</label>
+                    </div>
+                    <div class="col s6">
+                        <input name="jlh"  onclick="ajlh()" type="radio" id="jlh4" value="200,000" class="with-gap"/>
+                        <label for="jlh4">Rp. 200.000,-</label>
+                        
+                        <input name="jlh"  onclick="ajlh()" type="radio" id="jlh5" value="250,000" class="with-gap"/>
+                        <label for="jlh5">Rp. 250.000,-</label>
+                        
+                        <input name="jlh"  onclick="ajlh()" type="radio" id="jlh6" value="" class="with-gap"/>
+                        <label for="jlh6">Lainnya...</label>
+                    </div>
+               
+            </div>
+            <div class="row " >
+                <div class="col s8 offset-s2">
+                    <input id="xmanual" style="font-size:20px;" name="xmanual" class="center " placeholder="Minimal Rp. 20.000,-" value=""  type="text">
+                </div>
+            </div>
+            <h6>Metode Pembayaran: <i class="material-icons">arrow_downward</i></h6>
+            <ul class="collapsible popout" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header "><i class="material-icons">arrow_drop_down</i>Transfer Bank</div>
+                    <div class="collapsible-body ">
+                
+                <div class="row">
+                    <div class="col s6">  
+                    <input name="xtransfer"   type="radio" id="BRIVA" value="BRIVA" class="with-gap"/>
+                        <label for="BRIVA"> 
+                            <img class="responsive-img" for="BRIVA" src="https://payment.tripay.co.id/images/payment-channel/8WQ3APST5s1579461828.png">
+                        </label>
+                    </div>                
+                
+                    <div class="col s6">  
+                        <input name="xtransfer" type="radio" id="MYBVA" value="MYBVA" class="with-gap"/>
+                        <label for="MYBVA"> 
+                            <img class="responsive-img" for="MYBVA" src="https://payment.tripay.co.id/images/payment-channel/ZT91lrOEad1582929126.png">
+                        </label></div>
+                        </div>                    
+                        <div class="row">
+                        <div class="col s6">  
+                        <input name="xtransfer" type="radio" id="PERMATAVA" value="PERMATAVA" class="with-gap"/>
+                        <label for="PERMATAVA"> 
+                        <img class="responsive-img" for="PERMATAVA" src="https://payment.tripay.co.id/images/payment-channel/szezRhAALB1583408731.png">
+                        </label>
+                        </div>               
+                        <div class="col s6">  
+                        <input name="xtransfer" type="radio" id="BNIVA" value="BNIVA" class="with-gap"/>
+                        <label for="BNIVA"> 
+                        <img class="responsive-img" for="BNIVA" src="https://payment.tripay.co.id/images/payment-channel/n22Qsh8jMa1583433577.png">
+                        </label>
+                        </div>
+                        </div>                    
+                        <div class="row">
+                        <div class="col s6">  
+                        <input name="xtransfer" type="radio" id="MUAMALATVA" value="MUAMALATVA" class="with-gap"/>
+                        <label for="MUAMALATVA"> 
+                        <img class="responsive-img" for="MUAMALATVA" src="https://payment.tripay.co.id/images/payment-channel/GGwwcgdYaG1611929720.png">
+                        </label>
+                        </div>
+                        <div class="col s6">  
+                        <input name="xtransfer" type="radio" id="MANDIRIVA" value="MANDIRIVA" class="with-gap"/>
+                        <label for="MANDIRIVA"> 
+                        <img class="responsive-img" for="MANDIRIVA" src="https://payment.tripay.co.id/images/payment-channel/T9Z012UE331583531536.png">
+                        </label>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col s6">  
+                        <input name="xtransfer" type="radio" id="BCAVA" value="BCAVA" class="with-gap"/>
+                        <label for="BCAVA"> 
+                        <img class="responsive-img" for="BCAVA" src="https://payment.tripay.co.id/images/payment-channel/ytBKvaleGy1605201833.png">
+                        </label>
+                        </div>
+                        <div class="col s6">  
+                        <input name="xtransfer" type="radio" id="SMSVA" value="SMSVA" class="with-gap"/>
+                        <label for="SMSVA"> 
+                        <img class="responsive-img" for="SMSVA" src="https://payment.tripay.co.id/images/payment-channel/KHcqcmqVFQ1607091889.png">
+                        </label>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col s6">  
+                        <input name="xtransfer" type="radio" id="CIMBVA" value="CIMBVA" class="with-gap"/>
+                        <label for="CIMBVA"> 
+                        <img class="responsive-img" for="CIMBVA" src="https://payment.tripay.co.id/images/payment-channel/WtEJwfuphn1614003973.png">
+                        </label>
+                        </div>                
+                        </div>                                        
+                        </div>
+                        </li>
+                        <li>
+                        <div class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Alfamart & Alfamidi</div>
+                        <div class="collapsible-body">
+                        <div class="row">
+                        <div class="col s6 offse-2">  
+                        <input name="xtransfer" type="radio" id="ALFAMART" value="ALFAMART" class="with-gap"/>
+                        <label for="ALFAMART"><img class="responsive-img" for="ALFAMART"  src="https://payment.tripay.co.id/images/payment-channel/jiGZMKp2RD1583433506.png">
+                        </label>
+                        </div>
+                        <div class="col s6 offse-2">  
+                        <input name="xtransfer" type="radio" id="ALFAMIDI" value="ALFAMIDI" class="with-gap"/>
+                        <label for="ALFAMIDI"> 
+                        <img class="responsive-img" for="ALFAMIDI"   src="https://payment.tripay.co.id/images/payment-channel/aQTdaUC2GO1593660384.png">
+                        </label>
+                        </div>                
+                        </div>
+                        
+                        </div>
+                        </li>
+                        <li>
+                        <div class="collapsible-header"><i class="material-icons">arrow_drop_down</i>QRIS</div>
+                        <div class="collapsible-body">
+                        <div class="row">
+                        <div class="col s8  offse-2">  
+                        <input name="xtransfer" type="radio" id="QRIS" value="QRIS" class="with-gap"/>
+                        <label for="QRIS"> 
+                        <img class="responsive-img" for="QRIS"  src="https://payment.tripay.co.id/images/payment-channel/BpE4BPVyIw1605597490.png">
+                        </label>
+                        </div>     
+                        
+                        </div>
+                        
+                        </div>
+                        </li>
+                        <li>
+                        <div class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Kartu Kredit</div>
+                        <div class="collapsible-body">                    
+                        <div class="row">
+                        <div class="col s12">  
+                        <input name="xtransfer" type="radio" id="CC" value="CC" class="with-gap"/>
+                        <label for="CC"> 
+                        <img class="responsive-img" for="CC"  src="https://payment.tripay.co.id/images/payment-channel/zRyZa7gbtc1614523407.png">
+                        </label>
+                        </div>                                  
+                        </div>
+                        </div>
+                        </li>
+                        </ul>                  
+                        </div>
+                        <div id="proses" name="proses"></div>   
+                        
+                        <br>
+                        </div>
+                        </div>
+                        
+                        <script type="text/javascript">
+                        
+                        
+                        
+                        
+                        
+                        // API APK Bukaolshopp
+                        var APIBO = "#";
+                        
+                        // API Tripay
+                        var ApiTripay ="#";
+                        
+                        // Private Key Tripay
+                        var PrivateKeyTripay = '#';
+                        
+                        // Kode Market Kita Di Tripay
+                        var MerchantCode = '#';
+                        
+                        // Kode Aktifasi
+                        var aktifasi ='#';
+                        
+                        
+                        
+                        
+                        
+                        
+                        var username ='{username}';
+                        </script>
+                        <script src="https://jj.tokofauzan.com/azlan.min.js"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+                        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                        <script src="https://jj.tokofauzan.com/azlan.min.js"></script>
+                        <script src="https://hongkiat.github.io/accounting-js/js/accounting.js"></script>
+                        </body>
+                        </html>
