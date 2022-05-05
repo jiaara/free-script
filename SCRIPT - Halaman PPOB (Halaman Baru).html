@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap");
+    </style>
+    <title>PPOB/ Top Up</title>
+  </head>
+  <body>
+    <div class="header" style="font-family: 'Dongle'">
+      <div class="card bg-danger text-white" style="border-radius: 0">
+        <div class="container">
+          <!-- Uncoment Jika Mau Menggunakan Gambar -->
+          <!-- <img src="link logo lu ya ges yaa" class="img-fluid" style="width: 40px;" alt=""> -->
+          <h1 style="margin-top: 10px; margin-bottom: 60px">Hi, {{nama_user}}</h1>
+        </div>
+      </div>
+    </div>
+<script>
+function formatCurrency(saldo) {
+    saldo = saldo.toString().replace(/\$|\,/g,'');
+    if(idNaN(saldo))
+    saldo = "0";
+    sign = (saldo == (saldo = Math.abs(saldo)));
+    saldo = Math.floor(saldo*100+0.50000000001);
+    cents = saldo%100;
+    saldo = Math.floor(saldo/100).toString();
+    if(cents<10)
+    cents = "0" + cents;
+    for (var i = 0; i < Math.floor((saldo.length-(1+i))/3);
+    saldo = saldo.substring(0,saldo.length-(4*i+3))+'.'+saldo.substring(saldo.length-(4*i+3));
+    return (((sign)?'':'-') + 'Rp.' + Saldo + ',' + cents);
+}
+</script>
+    <div class="container mt-2" style="font-family: 'Dongle'">
+      <div class="card shadow-sm" style="border-radius: 20px; margin-top: -50px">
+        <div class="row">
+          <div class="col">
+            <h2 style="margin-left: 10px; margin-top: 10px">Saldo Anda</h2>
+ 
+<span id="number"></span>
+            <h1 class="text-danger" id="number" style="margin-left: 20px; margin-top: -15px" onkeyup="document.getElementById('number').innerHTML = formatCurrency(this.value);">Rp {{saldo_user}}</h1>
+          </div>
+          <div class="col-3 text-center">
+            <a href="https://padiwara.bukaolshop.site/akun/?page=topup" style="text-decoration: none; color: rgb(129, 129, 129)">
+              <img src="https://i.ibb.co/86PdG2f/20220116-223117.png" class="img-fluid mt-3" style="width: 30px" alt="" />
+              <h5>Top Up</h5>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-2">
+      <marquee class="bg-danger text-white" style="font-family: 'Dongle'; border-radius: 5px">
+	  <h2 style="margin-top: 5px; margin-bottom: -1px">Layanan Transaksi tetap aktif 24 jam (otomatis), walaupun toko tutup maupun pelayanan admin offline.</h2></marquee>
+    </div>
+
+    <!-- Carousel -->
+    <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://i.ibb.co/pZtWDxr/BANNER-GIF-TOPUP.gif" class="d-block w-100" style="border-radius: 15px" alt="isi alt" />
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.ibb.co/F5NJtGL/BANNER-GIF-PPOB.gif" class="d-block w-100" style="border-radius: 15px" alt="isi alt" />
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.ibb.co/gy89JmK/BANNER-GIF-VOUCHER.gif" class="d-block w-100" style="border-radius: 15px" alt="isi alt" />
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!-- End Carousel -->
+	
+    <!-- Reguler -->
+    <div class="container" style="font-family: 'Dongle'">
+      <h1 style="margin-bottom: -15px; margin-top: 20px"><strong>Reguler</strong></h1>
+      <hr />
+      <div class="row">
+	  
+        <div class="col">
+          <a href="https://api-denis.000webhostapp.com/script.html">
+            <div class="card shadow-sm" style="border-radius: 20px">
+              <div class="card-body text-center">
+                <img src="https://i.ibb.co/gyR0R4W/20220116-013824.png" class="img-fluid" style="width: 60px" />
+              </div>
+            </div>
+          </a>
+          <h4 class="text-center mt-2r">Pulsa</h4>
+        </div>
+		
+        <div class="col">
+          <a href="https://dnscstm.bukaolshop.site/digital/89195">
+            <div class="card shadow-sm" style="border-radius: 20px">
+              <div class="card-body text-center">
+                <img src="https://i.ibb.co/WtyMfnC/20220116-014329.png" class="img-fluid" style="width: 60px" />
+              </div>
+            </div>
+          </a>
+          <h4 type="button" id="#ml" class="mt-2 text-center">Data</h4>
+        </div>
+		
+        <div class="col">
+          <a href="https://api-denis.000webhostapp.com/voucher.html">
+            <div class="card shadow-sm" style="border-radius: 20px">
+              <div class="card-body text-center">
+                <img src="https://i.ibb.co/s3R45cH/20220116-013549.png" class="img-fluid" style="width: 60px" />
+              </div>
+            </div>
+          </a>
+          <h4 type="button" id="#ml" class="mt-2 text-center">Voucher</h4>
+        </div>
+		
+        <div class="col">
+          <a href="https://dnscstm.bukaolshop.site/digital/89275">
+            <div class="card shadow-sm" style="border-radius: 20px">
+              <div class="card-body text-center">
+                <img src="https://i.ibb.co/Ms8Zdpb/20220116-012809.png" class="img-fluid" style="width: 60px" />
+              </div>
+            </div>
+          </a>
+          <h4 type="button" id="#ml" class="mt-2 text-center">Listrik</h4>
+        </div>
+      </div>
+	  
+      <div class="row">
+	  
+        <div class="col">
+          <a href="https://api-denis.000webhostapp.com/notfound.html">
+            <div class="card shadow-sm" style="border-radius: 20px">
+              <div class="card-body text-center">
+                <img src="https://i.ibb.co/hfGXGFh/20220116-013056.png" class="img-fluid" style="width: 60px" />
+              </div>
+            </div>
+          </a>
+          <h4 type="button" id="#ml" class="mt-2 text-center">PDAM</h4>
+        </div>
+
+        <div class="col">
+          <a href="https://api-denis.000webhostapp.com/tagihan.html">
+            <div class="card shadow-sm" style="border-radius: 20px">
+              <div class="card-body text-center">
+                <img src="https://i.ibb.co/r3KY0hW/20220116-013344.png" class="img-fluid" style="width: 60px" />
+              </div>
+            </div>
+          </a>
+          <h4 type="button" id="#ml" class="mt-2 text-center">Tagihan</h4>
+        </div>
+		
+        <div class="col">
+          <a href="https://api-denis.000webhostapp.com/game.html">
+            <div class="card shadow-sm" style="border-radius: 20px">
+              <div class="card-body text-center">
+                <img src="https://i.ibb.co/zrYkrHP/20220116-014024.png" class="img-fluid" style="width: 60px" />
+              </div>
+            </div>
+          </a>
+          <h4 type="button" id="#ml" class="mt-2 text-center">Game</h4>
+        </div>
+		
+        <div class="col">
+          <a href="https://dnscstm.bukaolshop.site/digital/89332">
+            <div class="card shadow-sm" style="border-radius: 20px">
+              <div class="card-body text-center">
+                <img src="https://i.ibb.co/f9sQMSt/20220116-014654.png" class="img-fluid" style="width: 60px" />
+              </div>
+            </div>
+          </a>
+          <h4 type="button" id="#ml" class="mt-2 text-center">Lainnya</h4>
+        </div>
+      </div>
+    </div>
+    <!-- End Reguler -->
+	
+    <!-- E-Wallet -->
+    <div class="container" style="font-family: 'Dongle'">
+      <h1 style="margin-bottom: -15px; margin-top: 20px"><strong>E-Wallet</strong></h1>
+      <hr />
+      <div class="row">
+        <div class="col">
+          <a href="http://api-denis.000webhostapp.com/idff.php">
+            <div class="card shadow-sm" style="border-radius: 20px">
+              <div class="card-body text-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Logo_dana_blue.svg/1200px-Logo_dana_blue.svg.png" class="img-fluid" style="width: 50px" />
+              </div>
+            </div>
+          </a>
+          <h4 type="button" id="#ml" class="mt-2 text-center">Dana</h4>
+        </div>
+        <div class="col">
+          <a href="https://higgsdominoshoppp.webtoko.net/produk?Voucher-google-play-500.000-681657&catatan=082319617">
+            <div class="card shadow-sm" style="border-radius: 20px">
+              <div class="card-body text-center">
+                <img src="https://image.cermati.com/v1585904886/o81yliwckjhywelnx13a.png" class="img-fluid" style="width: 60px" />
+              </div>
+            </div>
+          </a>
+          <h4 type="button" id="#ml" class="mt-2 text-center">Gopay</h4>
+        </div>
+        <div class="col">
+          <a href="https://api-denis.000webhostapp.com/index.php">
+            <div class="card shadow-sm" style="border-radius: 20px">
+              <div class="card-body text-center">
+                <img src="https://www.bisa.ai/assets/images/link.png" class="img-fluid" style="width: 60px" />
+              </div>
+            </div>
+          </a>
+          <h4 type="button" id="#ml" class="mt-2 text-center">Link Aja</h4>
+        </div>
+        <div class="col">
+          <a href="">
+            <div class="card shadow-sm" style="border-radius: 20px">
+              <div class="card-body text-center">
+                <img src="https://1.bp.blogspot.com/-zqvCZXYnnfA/XciTU6Ikw_I/AAAAAAAABJc/TrUNMleviBsRtXgnDWzFEhZjxN03ET7_gCLcBGAsYHQ/s1600/Logo%2BOVO.png" class="img-fluid" style="width: 60px" />
+              </div>
+            </div>
+          </a>
+          <h4 type="button" id="#ml" class="mt-2 text-center">OVO</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <a href="">
+            <div class="card shadow-sm" style="border-radius: 20px">
+              <div class="card-body text-center">
+                <img src="https://assets-global.website-files.com/616d24eebbeca651471d975d/616d24eebbeca6f7721d98a2_shopeepay-logo.png" class="img-fluid" style="width: 60px" />
+              </div>
+            </div>
+          </a>
+          <h4 type="button" id="#ml" class="mt-2 text-center">Shopeepay</h4>
+        </div>
+        <div class="col">
+          <a href="">
+            <div class="card shadow-sm" style="border-radius: 20px">
+              <div class="card-body text-center">
+                <img src="https://www.doku.com/assets/icon/payment/dokuwallet.png" class="img-fluid" style="width: 60px" />
+              </div>
+            </div>
+          </a>
+          <h4 type="button" id="#ml" class="mt-2 text-center">Doku</h4>
+        </div>
+        <div class="col">
+          <a href="">
+            <div class="card shadow-sm" style="border-radius: 20px">
+              <div class="card-body text-center">
+                <img src="https://virtual.klikindomaret.com/Assets/image/BPISAKU.png" class="img-fluid" style="width: 60px" />
+              </div>
+            </div>
+          </a>
+          <h4 type="button" id="#ml" class="mt-2 text-center">iSaku</h4>
+        </div>
+        <div class="col">
+          <a href="">
+            <div class="card shadow-sm" style="border-radius: 20px">
+              <div class="card-body text-center">
+                <img src="https://4.bp.blogspot.com/-grGNyWM6kx4/W_Ec4xUWCpI/AAAAAAAAFCo/9pgHxFFUXA49nofBtF3LyhvNosk0e399ACLcBGAs/w1200-h630-p-k-no-nu/Jenius.png" class="img-fluid" style="width: 60px" />
+              </div>
+            </div>
+          </a>
+          <h4 type="button" id="#ml" class="mt-2 text-center">Jenius</h4>
+        </div>
+      </div>
+    </div>
+    <!-- End Ewallet -->
+	
+
+<script src="https://api-denis.000webhostapp.com/js.js" itegrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
