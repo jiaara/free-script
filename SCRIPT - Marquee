@@ -1,0 +1,6 @@
+    <!-- TEXT BERJALAN -->
+    <div class="container mt-2">
+      <marquee class="bg-danger text-white" style="font-family: 'Dongle'; border-radius: 5px">
+	  <h2 style="margin-top: 5px; margin-bottom: -1px">Walaupun transaksi dapat dilakukan 24 jam (otomatis), mohon untuk tidak bertransaksi pada pukul 23.00-01.00 WIB.</h2></marquee>
+    </div>
+  <!-- END TEXT BERJALAN -->
