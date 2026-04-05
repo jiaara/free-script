@@ -1,0 +1,55 @@
+<style>
+  /* Container untuk memposisikan tombol di tengah */
+  .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Hapus baris ini jika hanya ingin di tengah secara horizontal saja */
+  }
+
+  /* Styling dasar tombol */
+  .btn-beranda {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Jarak antara ikon dan teks */
+    background-color: #FF0000; /* Warna latar (Merah) */
+    color: #ffffff; /* Warna teks */
+    padding: 12px 24px;
+    border-radius: 8px; /* Sudut melengkung */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    transition: all 0.3s ease; /* Animasi saat di-hover */
+  }
+
+  /* Efek saat kursor diarahkan ke tombol (Hover) */
+  .btn-beranda:hover {
+    background-color: #1d4ed8; /* Warna biru lebih gelap */
+    transform: translateY(-2px); /* Efek tombol terangkat sedikit */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Styling untuk ikon SVG */
+  .btn-beranda svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+</style>
+
+<!-- Wrapper untuk tengah -->
+<div class="center-container">
+  
+  <!-- Tombol Hyperlink -->
+  <a href="/" class="btn-beranda">
+    <!-- Ikon Home (SVG) -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+    </svg>
+    KEMBALI KE BERANDA
+  </a>
+
+</div>
