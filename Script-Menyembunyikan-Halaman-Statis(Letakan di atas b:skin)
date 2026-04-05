@@ -1,0 +1,7 @@
+<b:if cond='data:blog.pageType == "static_page"'>
+<style>
+.post-title.entry-title{
+display: none;
+}
+</style>
+</b:if>
