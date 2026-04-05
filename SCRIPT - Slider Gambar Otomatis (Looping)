@@ -1,0 +1,74 @@
+<style>
+  /* ===== SLIDER OTOMATIS ===== */
+  .slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slider-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    /* Animasi berjalan terus tanpa henti */
+    animation: scroll 20s linear infinite;
+  }
+
+  .slide-card {
+    width: 320px;
+    height: 240px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #eee;
+  }
+
+  .slide-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Kunci looping mulus: Geser persis setengah dari total lebar track + setengah gap (10px) */
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 10px)); } 
+  }
+
+  /* === RESPONSIVE === */
+  @media (max-width: 768px) {
+    .slide-card {
+      width: 260px;
+      height: 200px;
+    }
+  }
+</style>
+
+<div class="slider-container">
+  <div class="slider-track">
+    <!-- ================= SET 1 (ORIGINAL) ================= -->
+    <div class="slide-card"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYb7b8LFVLR7HizjPf00RLTKnQ7g_Z31cV5AnCctq4gY7_74D4Yw6c8aO5SHGOqvLhOvqk_IFEcswzshGOdXX6Rr7ByC1-vFtCggEH_wYGjlopNpFQz5HtPTUsUeKiiawTpJFKtL_NscW_pdEX6P6J0tv92IbdjZeqIyy7HKQxRIMADPFaEz2sRBB4QrRQ/s600/JIAARA.ID%20-%20Jiaara%20Digiprint%20Percetakan%20Digital%20Sukoharjo%20(Gambar%20Slider%201).jpg" alt="JIAARA DIGIPRINT 1"></div>
+    <div class="slide-card"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRWlBeV-juxw4S5rHoL_ubq8c8vf6sMtpoiodPlZPgRBml7Yh7kedUZww-F92wYTgM0SRhE9-4ug4KOK89_9bbADwwRLspMjFdAnyom7jeOO_qr-3kxpLKvh2e4a3a2LiKUzO_Qtu_4BWYU-PRZ6XXCbzbaARNwNXuabIZbRQF4Z_0DSl-0pR3Kh3R7Q8t/s600/JIAARA.ID%20-%20Jiaara%20Digiprint%20Percetakan%20Digital%20Sukoharjo%20(Gambar%20Slider%202).jpg" alt="JIAARA DIGIPRINT 2"></div>
+    <div class="slide-card"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjr8BATFGfkXl3HRW0TS-pjeww8GJWw1i5T3ZsJGOwC9rNjEMpgiJxdTrWow5qBCIKcBnqqMxb12ZCTPFhFHPmn5wtrZa4e0O6ovCR5Cf_2ewC79A1cJ0XGrv7CveiUPZ8i8vFIEyZiK-7wW7pYUGPTZr8qjntCEB-HHY7jDw4a-ovDLB5h4sgVz9Xl2WHt/s600/JIAARA.ID%20-%20Jiaara%20Digiprint%20Percetakan%20Digital%20Sukoharjo%20(Gambar%20Slider%203).jpg" alt="JIAARA DIGIPRINT 3"></div>
+    <div class="slide-card"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsNkfm7fQphozkkecY8UAVD9H01yYeMzIHih6ya_K-8n7ZlCQaDYuOKJSxU6WIDnSv-Jk2YTsapjyhFwgh4TIa-j0s3PYDYRnuNKwAj1d-5IFyZjMnbbadh6myKzWZPaMuEh_GuQkE-7VY_h0v-FQ0Z1-74bt7jQm-90KejgkIMTYrpLjzSjvWwGQpjktX/s600/JIAARA.ID%20-%20Jiaara%20Digiprint%20Percetakan%20Digital%20Sukoharjo%20(Gambar%20Slider%204).jpg" alt="JIAARA DIGIPRINT 4"></div>
+    <div class="slide-card"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8K5ZTWbJ7UsfHXZ5QGJeXMYmeZeNuy8mNszYgFOtx_zTd0gjloWlOC_XMe3Vo3O3VgiCJCyn-l5H9Y1ec8GTp5MEkFnGG-RV9omsRbRwpxyTrMQHN_B-NU0Ioah5oY0gulKMnPSSBo7x5ZzuofbciG6nm_byVYu-EvAL00VMnyp-QmpcYs_X5BauyERQ6/s600/JIAARA.ID%20-%20Jiaara%20Digiprint%20Percetakan%20Digital%20Sukoharjo%20(Gambar%20Slider%205).jpg" alt="JIAARA DIGIPRINT 5"></div>
+    <div class="slide-card"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzUfriyTnyU680TYa2NxyrC74ni3YBTYLprWGaUSNWkF_HUPQJsR_wopLURF3hKEigNLiY-kQsWSAWcgqDQ7SwbwXbuCxQVGdrlLXZ4s3A5MDonDbUB29Ix5VpdyHx7CYZOpkKyhs176W7vkcpoGXuVzhmCUPSK6XcIbzWwoHbFV1WdmDDDMMkH2cNE9id/s600/JIAARA.ID%20-%20Jiaara%20Digiprint%20Percetakan%20Digital%20Sukoharjo%20(Gambar%20Slider%206).jpg" alt="JIAARA DIGIPRINT 6"></div>
+    <div class="slide-card"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7xzsDWI6qRiCdOvyrHfa2JXqKNgne1KME9svtqCUnABLX-W8Iuoi7G4hyPU2BMEwL82GDRrh0_M2lhLYA0nkdYHcURtY3bk-_eWIl8pRgvxzZhI-g-4avqeMP0Aafj8IHCYMz2m0EtzUNAKQ2BW-5uCMBjWzvw6aONyT9LiffxJfqqT2e6BJ6pNvrPN1S/s600/JIAARA.ID%20-%20Jiaara%20Digiprint%20Percetakan%20Digital%20Sukoharjo%20(Gambar%20Slider%207).jpg" alt="JIAARA DIGIPRINT 7"></div>
+    <div class="slide-card"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKgHSDjDNRXx4CyiWjUwVn8ysVmU02gWGsz8KXvh1K8QIHB4OQiKB1vwMQTXcA36eoE9GtYpDxZ3R1S-EPpJObUqOixIDXxmt25Mw__WgAhpIYSdOlJ_LRd2hef7__l6Y-y2COk4JrRm6-7cmu08APepQTgc8E6tC3Uaambmxfe-eKyfTrj0Foafr3rZZT/s600/JIAARA.ID%20-%20Jiaara%20Digiprint%20Percetakan%20Digital%20Sukoharjo%20(Gambar%20Slider%208).jpg" alt="JIAARA DIGIPRINT 8"></div>
+    <div class="slide-card"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEYyi5Fve-6HUeAmnd4jdM-aH6xtvDJYyT7vV9m9vrIXtck-i8SpgZ5E2muEcYg_en90BpvVY_C8_lsIOujKFOfLtGUG2D9c72JLvSMvDBvLYdNEJj1Kk0F7YmFh10jqdOFJLoUF3-krD2A5W8rsM9w4vPt8zlSDcJKllJgyZNOt-M-uIKhPIYJSFTQO8V/s600/JIAARA.ID%20-%20Jiaara%20Digiprint%20Percetakan%20Digital%20Sukoharjo%20(Gambar%20Slider%209).jpg" alt="JIAARA DIGIPRINT 9"></div>
+    <div class="slide-card"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgM2dOqUKK0l1AZBHCsvMbR-jd4cnEPCmVwbrtH3vnSMTNMPPLbApgRdnfZGM1qYc8_ORqPXEL5F6INuzME-0hTtWz33Wg5CyIJn_4a7VfiuMAA1jBiqqmtbyo_TTMGbddF3HVbSkmbhyg5l68IbgbrSDl9sCE-oR0mOtlodswZYIjD2yoXnCgIw5AU9S4e/s600/JIAARA.ID%20-%20Jiaara%20Digiprint%20Percetakan%20Digital%20Sukoharjo%20(Gambar%20Slider%2010).jpg" alt="JIAARA DIGIPRINT 10"></div>
+
+    <!-- ================= SET 2 (DUPLIKAT AGAR BISA LOOPING) ================= -->
+    <div class="slide-card"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYb7b8LFVLR7HizjPf00RLTKnQ7g_Z31cV5AnCctq4gY7_74D4Yw6c8aO5SHGOqvLhOvqk_IFEcswzshGOdXX6Rr7ByC1-vFtCggEH_wYGjlopNpFQz5HtPTUsUeKiiawTpJFKtL_NscW_pdEX6P6J0tv92IbdjZeqIyy7HKQxRIMADPFaEz2sRBB4QrRQ/s600/JIAARA.ID%20-%20Jiaara%20Digiprint%20Percetakan%20Digital%20Sukoharjo%20(Gambar%20Slider%201).jpg" alt="JIAARA DIGIPRINT 1"></div>
+    <div class="slide-card"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRWlBeV-juxw4S5rHoL_ubq8c8vf6sMtpoiodPlZPgRBml7Yh7kedUZww-F92wYTgM0SRhE9-4ug4KOK89_9bbADwwRLspMjFdAnyom7jeOO_qr-3kxpLKvh2e4a3a2LiKUzO_Qtu_4BWYU-PRZ6XXCbzbaARNwNXuabIZbRQF4Z_0DSl-0pR3Kh3R7Q8t/s600/JIAARA.ID%20-%20Jiaara%20Digiprint%20Percetakan%20Digital%20Sukoharjo%20(Gambar%20Slider%202).jpg" alt="JIAARA DIGIPRINT 2"></div>
+    <div class="slide-card"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjr8BATFGfkXl3HRW0TS-pjeww8GJWw1i5T3ZsJGOwC9rNjEMpgiJxdTrWow5qBCIKcBnqqMxb12ZCTPFhFHPmn5wtrZa4e0O6ovCR5Cf_2ewC79A1cJ0XGrv7CveiUPZ8i8vFIEyZiK-7wW7pYUGPTZr8qjntCEB-HHY7jDw4a-ovDLB5h4sgVz9Xl2WHt/s600/JIAARA.ID%20-%20Jiaara%20Digiprint%20Percetakan%20Digital%20Sukoharjo%20(Gambar%20Slider%203).jpg" alt="JIAARA DIGIPRINT 3"></div>
+    <div class="slide-card"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsNkfm7fQphozkkecY8UAVD9H01yYeMzIHih6ya_K-8n7ZlCQaDYuOKJSxU6WIDnSv-Jk2YTsapjyhFwgh4TIa-j0s3PYDYRnuNKwAj1d-5IFyZjMnbbadh6myKzWZPaMuEh_GuQkE-7VY_h0v-FQ0Z1-74bt7jQm-90KejgkIMTYrpLjzSjvWwGQpjktX/s600/JIAARA.ID%20-%20Jiaara%20Digiprint%20Percetakan%20Digital%20Sukoharjo%20(Gambar%20Slider%204).jpg" alt="JIAARA DIGIPRINT 4"></div>
+    <div class="slide-card"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8K5ZTWbJ7UsfHXZ5QGJeXMYmeZeNuy8mNszYgFOtx_zTd0gjloWlOC_XMe3Vo3O3VgiCJCyn-l5H9Y1ec8GTp5MEkFnGG-RV9omsRbRwpxyTrMQHN_B-NU0Ioah5oY0gulKMnPSSBo7x5ZzuofbciG6nm_byVYu-EvAL00VMnyp-QmpcYs_X5BauyERQ6/s600/JIAARA.ID%20-%20Jiaara%20Digiprint%20Percetakan%20Digital%20Sukoharjo%20(Gambar%20Slider%205).jpg" alt="JIAARA DIGIPRINT 5"></div>
+    <div class="slide-card"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzUfriyTnyU680TYa2NxyrC74ni3YBTYLprWGaUSNWkF_HUPQJsR_wopLURF3hKEigNLiY-kQsWSAWcgqDQ7SwbwXbuCxQVGdrlLXZ4s3A5MDonDbUB29Ix5VpdyHx7CYZOpkKyhs176W7vkcpoGXuVzhmCUPSK6XcIbzWwoHbFV1WdmDDDMMkH2cNE9id/s600/JIAARA.ID%20-%20Jiaara%20Digiprint%20Percetakan%20Digital%20Sukoharjo%20(Gambar%20Slider%206).jpg" alt="JIAARA DIGIPRINT 6"></div>
+    <div class="slide-card"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7xzsDWI6qRiCdOvyrHfa2JXqKNgne1KME9svtqCUnABLX-W8Iuoi7G4hyPU2BMEwL82GDRrh0_M2lhLYA0nkdYHcURtY3bk-_eWIl8pRgvxzZhI-g-4avqeMP0Aafj8IHCYMz2m0EtzUNAKQ2BW-5uCMBjWzvw6aONyT9LiffxJfqqT2e6BJ6pNvrPN1S/s600/JIAARA.ID%20-%20Jiaara%20Digiprint%20Percetakan%20Digital%20Sukoharjo%20(Gambar%20Slider%207).jpg" alt="JIAARA DIGIPRINT 7"></div>
+    <div class="slide-card"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKgHSDjDNRXx4CyiWjUwVn8ysVmU02gWGsz8KXvh1K8QIHB4OQiKB1vwMQTXcA36eoE9GtYpDxZ3R1S-EPpJObUqOixIDXxmt25Mw__WgAhpIYSdOlJ_LRd2hef7__l6Y-y2COk4JrRm6-7cmu08APepQTgc8E6tC3Uaambmxfe-eKyfTrj0Foafr3rZZT/s600/JIAARA.ID%20-%20Jiaara%20Digiprint%20Percetakan%20Digital%20Sukoharjo%20(Gambar%20Slider%208).jpg" alt="JIAARA DIGIPRINT 8"></div>
+    <div class="slide-card"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEYyi5Fve-6HUeAmnd4jdM-aH6xtvDJYyT7vV9m9vrIXtck-i8SpgZ5E2muEcYg_en90BpvVY_C8_lsIOujKFOfLtGUG2D9c72JLvSMvDBvLYdNEJj1Kk0F7YmFh10jqdOFJLoUF3-krD2A5W8rsM9w4vPt8zlSDcJKllJgyZNOt-M-uIKhPIYJSFTQO8V/s600/JIAARA.ID%20-%20Jiaara%20Digiprint%20Percetakan%20Digital%20Sukoharjo%20(Gambar%20Slider%209).jpg" alt="JIAARA DIGIPRINT 9"></div>
+    <div class="slide-card"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgM2dOqUKK0l1AZBHCsvMbR-jd4cnEPCmVwbrtH3vnSMTNMPPLbApgRdnfZGM1qYc8_ORqPXEL5F6INuzME-0hTtWz33Wg5CyIJn_4a7VfiuMAA1jBiqqmtbyo_TTMGbddF3HVbSkmbhyg5l68IbgbrSDl9sCE-oR0mOtlodswZYIjD2yoXnCgIw5AU9S4e/s600/JIAARA.ID%20-%20Jiaara%20Digiprint%20Percetakan%20Digital%20Sukoharjo%20(Gambar%20Slider%2010).jpg" alt="JIAARA DIGIPRINT 10"></div>
+  </div>
+</div>
