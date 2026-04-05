@@ -4,39 +4,65 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Hapus baris ini jika hanya ingin di tengah secara horizontal saja */
+    /* Menggunakan 100dvh (Dynamic Viewport Height) agar tidak tertutup bar navigasi HP */
+    min-height: 100vh;
+    min-height: 100dvh; 
+    padding: 20px; /* Memberi jarak agar tidak menempel di tepi layar HP */
+    box-sizing: border-box;
   }
 
-  /* Styling dasar tombol */
+  /* Styling dasar tombol dengan optimasi Mobile */
   .btn-beranda {
+    /* OPTIMASI KLIK MOBILE */
+    position: relative;
+    z-index: 999; /* Memastikan tombol selalu berada di lapisan paling atas agar tidak tertutup elemen transparan lain */
+    touch-action: manipulation; /* Menghilangkan delay 300ms saat disentuh (tap) di layar HP */
+    -webkit-tap-highlight-color: transparent; /* Menghilangkan kotak biru bawaan browser HP saat di-tap */
+    user-select: none; /* Mencegah teks terblok tidak sengaja saat menahan layar */
+    
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Jarak antara ikon dan teks */
-    background-color: #FF0000; /* Warna latar (Merah) */
-    color: #ffffff; /* Warna teks */
-    padding: 12px 24px;
-    border-radius: 8px; /* Sudut melengkung */
-    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    gap: 10px;
+    background-color: #FF0000;
+    color: #ffffff;
+    padding: 14px 28px; /* Diperbesar sedikit agar lebih mudah di-tap oleh jari (Area sentuh ideal) */
+    border-radius: 8px;
+    text-decoration: none;
     font-family: Arial, sans-serif;
     font-size: 16px;
     font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
-    transition: all 0.3s ease; /* Animasi saat di-hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    
+    /* Mencegah tombol meluber di layar super kecil */
+    max-width: 100%;
+    text-align: center;
+    box-sizing: border-box;
   }
 
-  /* Efek saat kursor diarahkan ke tombol (Hover) */
-  .btn-beranda:hover {
-    background-color: #1d4ed8; /* Warna biru lebih gelap */
-    transform: translateY(-2px); /* Efek tombol terangkat sedikit */
+  /* Efek saat kursor diarahkan (PC) atau ditekan (Mobile) */
+  .btn-beranda:hover, 
+  .btn-beranda:active {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
 
   /* Styling untuk ikon SVG */
   .btn-beranda svg {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     fill: currentColor;
+    flex-shrink: 0; /* Mencegah ikon gepeng di layar kecil */
+  }
+  
+  /* Penyesuaian teks pada layar HP yang sangat sempit */
+  @media (max-width: 400px) {
+    .btn-beranda {
+      font-size: 14px;
+      padding: 12px 20px;
+    }
   }
 </style>
 
