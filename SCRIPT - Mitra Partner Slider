@@ -1,0 +1,153 @@
+<!-- Container Utama -->
+<div class="sky-container">
+  <!-- Label Statis -->
+  <div class="sky-label">Mitra Penerbangan Kami:</div>
+
+  <!-- Area Slider dengan Gradasi -->
+  <div class="sky-slider-wrapper">
+    <div class="sky-track">
+      <!-- Grup Logo (Diulang untuk animasi seamless) -->
+      <div class="logo-group">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4b/Saudia_Logo.svg/512px-Saudia_Logo.svg.png" alt="Saudia">
+        <img src="https://upload.wikimedia.org/wikipedia/id/thumb/6/6b/Lion_Air_logo.svg/512px-Lion_Air_logo.svg.png" alt="Lion Air">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/01/Garuda_Indonesia_logo.svg/512px-Garuda_Indonesia_logo.svg.png" alt="Garuda Indonesia">
+      </div>
+      <!-- Duplikat untuk loop -->
+      <div class="logo-group">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4b/Saudia_Logo.svg/512px-Saudia_Logo.svg.png" alt="Saudia">
+        <img src="https://upload.wikimedia.org/wikipedia/id/thumb/6/6b/Lion_Air_logo.svg/512px-Lion_Air_logo.svg.png" alt="Lion Air">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/01/Garuda_Indonesia_logo.svg/512px-Garuda_Indonesia_logo.svg.png" alt="Garuda Indonesia">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container Utama -->
+<div class="sky-container">
+  <!-- Label Statis -->
+  <div class="sky-label">Mitra Kami Lainnya:</div>
+
+  <!-- Area Slider dengan Gradasi -->
+  <div class="sky-slider-wrapper">
+    <div class="sky-track">
+      <!-- Grup Logo (Diulang untuk animasi seamless) -->
+      <div class="logo-group">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4b/Saudia_Logo.svg/512px-Saudia_Logo.svg.png" alt="Saudia">
+        <img src="https://upload.wikimedia.org/wikipedia/id/thumb/6/6b/Lion_Air_logo.svg/512px-Lion_Air_logo.svg.png" alt="Lion Air">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/01/Garuda_Indonesia_logo.svg/512px-Garuda_Indonesia_logo.svg.png" alt="Garuda Indonesia">
+      </div>
+      <!-- Duplikat untuk loop -->
+      <div class="logo-group">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4b/Saudia_Logo.svg/512px-Saudia_Logo.svg.png" alt="Saudia">
+        <img src="https://upload.wikimedia.org/wikipedia/id/thumb/6/6b/Lion_Air_logo.svg/512px-Lion_Air_logo.svg.png" alt="Lion Air">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/01/Garuda_Indonesia_logo.svg/512px-Garuda_Indonesia_logo.svg.png" alt="Garuda Indonesia">
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Container Style */
+  .sky-container {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+    height: 60px;
+  }
+
+  /* Teks Statis (Kiri) */
+  .sky-label {
+    color: #00a88f;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 18px;
+    white-space: nowrap;
+    margin-right: 30px;
+    z-index: 10;
+    background: #fff;
+  }
+
+  /* Wrapper Slider */
+  .sky-slider-wrapper {
+    position: relative;
+    flex-grow: 1;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Efek Gradasi Masuk & Keluar */
+  .sky-slider-wrapper::before,
+  .sky-slider-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 2;
+  }
+
+  .sky-slider-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, white, transparent);
+  }
+
+  .sky-slider-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, white, transparent);
+  }
+
+  /* Jalur Animasi (Track) */
+  .sky-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    /* Bergerak dari KIRI ke KANAN sesuai permintaan */
+    animation: slideRight 20s linear infinite;
+  }
+
+  .logo-group {
+    display: flex;
+    align-items: center;
+    gap: 60px; /* Jarak antar logo */
+    padding-right: 60px;
+  }
+
+  .logo-group img {
+    height: 35px; /* Sesuaikan tinggi logo */
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(20%); /* Opsional: agar lebih menyatu */
+    transition: filter 0.3s;
+  }
+
+  .logo-group img:hover {
+    filter: grayscale(0%);
+  }
+
+  /* Animasi Kiri ke Kanan */
+  @keyframes slideRight {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  /* Responsif untuk layar kecil */
+  @media (max-width: 600px) {
+    .sky-label {
+      font-size: 14px;
+      margin-right: 15px;
+    }
+    .logo-group img {
+      height: 25px;
+    }
+  }
+</style>
