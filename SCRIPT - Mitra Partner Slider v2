@@ -1,0 +1,154 @@
+<!-- Container Utama -->
+<div class="partners-section">
+    <!-- Header dengan Garis -->
+    <div class="partners-header">
+        <span class="partners-title">Mitra dan Penerbangan Kami</span>
+    </div>
+
+    <!-- Slider Wrapper -->
+    <div class="logo-slider">
+        <div class="logo-track">
+            <!-- Isi Logo (Grup 1) -->
+            <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=INSULET" alt="Insulet"></div>
+            <div class="separator">•</div>
+            <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=MASCO" alt="Masco"></div>
+            <div class="separator">•</div>
+            <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=MOODY'S" alt="Moodys"></div>
+            <div class="separator">•</div>
+            <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=ABBVIE" alt="Abbvie"></div>
+            <div class="separator">•</div>
+            <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=ALIGN" alt="Align"></div>
+            <div class="separator">•</div>
+            <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=BUNGE" alt="Bunge"></div>
+            <div class="separator">•</div>
+            <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=DISCOVER" alt="Discover"></div>
+            <div class="separator">•</div>
+            <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=ESSEX" alt="Essex"></div>
+            <div class="separator">•</div>
+            <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=HOLOGIC" alt="Hologic"></div>
+            <div class="separator">•</div>
+
+            <!-- Duplikasi Logo (Grup 2) untuk Looping Tanpa Jeda -->
+            <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=INSULET" alt="Insulet"></div>
+            <div class="separator">•</div>
+            <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=MASCO" alt="Masco"></div>
+            <div class="separator">•</div>
+            <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=MOODY'S" alt="Moodys"></div>
+            <div class="separator">•</div>
+            <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=ABBVIE" alt="Abbvie"></div>
+            <div class="separator">•</div>
+            <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=ALIGN" alt="Align"></div>
+            <div class="separator">•</div>
+            <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=BUNGE" alt="Bunge"></div>
+            <div class="separator">•</div>
+            <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=DISCOVER" alt="Discover"></div>
+            <div class="separator">•</div>
+            <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=ESSEX" alt="Essex"></div>
+            <div class="separator">•</div>
+            <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=HOLOGIC" alt="Hologic"></div>
+            <div class="separator">•</div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Global Section Style */
+    .partners-section {
+        width: 100%;
+        padding: 50px 0;
+        background-color: #ffffff;
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        overflow: hidden;
+    }
+
+    /* Header & Label "Mitra dan Penerbangan Kami" */
+    .partners-header {
+        position: relative;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .partners-header::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: #e9ecef; /* Garis tipis di belakang teks */
+        z-index: 1;
+    }
+
+    .partners-title {
+        position: relative;
+        z-index: 2;
+        background: #f8f9fa; /* Background kotak teks */
+        padding: 8px 24px;
+        border-radius: 50px;
+        font-size: 14px;
+        color: #333;
+        border: 1px solid #efefef;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    }
+
+    /* Slider Logic */
+    .logo-slider {
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+
+    .logo-track {
+        display: flex;
+        align-items: center;
+        gap: 40px; /* Jarak antar elemen */
+        animation: scroll 40s linear infinite; /* Atur kecepatan di sini (40s) */
+        width: max-content;
+    }
+
+    .logo-item {
+        flex-shrink: 0;
+    }
+
+    .logo-item img {
+        height: 35px; /* Sesuaikan tinggi logo */
+        width: auto;
+        display: block;
+        
+        /* MODE GRAYSCALE: Ubah 100% jadi 0% jika ingin berwarna */
+        filter: grayscale(100%); 
+        opacity: 0.7;
+        transition: filter 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Hover effect (Optional): Berubah warna saat mouse diatasnya */
+    .logo-item img:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+
+    .separator {
+        color: #ccc;
+        font-size: 20px;
+        user-select: none;
+    }
+
+    /* Keyframes untuk Animasi Looping */
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            /* Pastikan angka ini tepat setengah dari total lebar track */
+            transform: translateX(calc(-50% - 20px)); 
+        }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .logo-item img { height: 25px; }
+        .logo-track { gap: 25px; }
+    }
+</style>
