@@ -1,0 +1,194 @@
+<!-- Notification Overlay Container -->
+<div id="custom-modal-overlay" class="modal-overlay">
+    <div class="modal-card">
+        <!-- Header -->
+        <div class="modal-header">
+            <div class="header-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                <span>Pemberitahuan</span>
+            </div>
+            <div class="header-close" onclick="document.getElementById('custom-modal-overlay').style.display='none'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </div>
+        </div>
+
+        <!-- Body Content -->
+        <div class="modal-body">
+            <h2 class="modal-title">PERHATIAN !!</h2>
+            <p class="modal-desc">
+                Ini Adalah <span class="text-green">Demo Landing Page</span>  Untuk <i>Company Profile</i> Perusahaan Biro Jasa Haji dan Umroh. Oleh Sebab itu, situs ini <span class="text-yellow">Fiktif/ Rekayasa</span>. Tidak menerima pelayanan secara nyata.
+            </p>
+            
+            <div class="price-section">
+                <span class="price-old">Rp250.000</span>
+                <div class="price-new">
+                    <span class="currency">Rp</span> 100.000
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="modal-footer">
+                <a href="URL_LINK_DISINI" class="btn btn-white">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    Beli Template Saja
+                </a>
+                <a href="URL_LINK_DISINI" class="btn btn-yellow">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    Template + Pemasangan (+Rp. 50.000)
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* 1. Blur Transparan 60% */
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6); /* Transparansi overlay */
+        backdrop-filter: blur(8px); /* Efek blur background */
+        -webkit-backdrop-filter: blur(8px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999999;
+    }
+
+    /* 2. Warna Background Notifikasi Merah */
+    .modal-card {
+        background-color: #b91c1c; /* Warna merah (Red 700) */
+        width: 90%;
+        max-width: 480px;
+        border-radius: 12px;
+        border: 1.5px dashed rgba(255, 255, 255, 0.3); /* Border garis putus seperti di gambar */
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        color: white;
+        position: relative;
+        /* Pattern buku halus (opsional untuk kemiripan 100%) */
+        background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+        background-size: 20px 20px;
+    }
+
+    .modal-header {
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 12px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .header-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    .header-close {
+        cursor: pointer;
+        opacity: 0.7;
+        transition: 0.3s;
+    }
+
+    .header-close:hover {
+        opacity: 1;
+    }
+
+    .modal-body {
+        padding: 30px 25px;
+        text-align: center;
+    }
+
+    .modal-title {
+        margin: 0 0 15px 0;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .modal-desc {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .text-green { color: #4ade80; font-weight: bold; }
+    .text-yellow { color: #fbbf24; font-weight: bold; }
+
+    .price-section {
+        margin-bottom: 25px;
+    }
+
+    .price-old {
+        text-decoration: line-through;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.7);
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .price-new {
+        font-size: 48px;
+        font-weight: 800;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        line-height: 1;
+    }
+
+    .currency {
+        font-size: 20px;
+        margin-right: 4px;
+        margin-top: 8px;
+    }
+
+    /* 3 & 4. Styling Tombol */
+    .modal-footer {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 10px 18px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn:active {
+        transform: scale(0.95);
+    }
+
+    .btn-white {
+        background: white;
+        color: #333;
+    }
+
+    .btn-yellow {
+        background: #fbbf24;
+        color: #000;
+    }
+
+    /* 5. Responsive & Selalu Muncul */
+    /* Notifikasi ini akan selalu muncul tiap refresh karena tidak ada logika localStorage.hide */
+    @media (max-width: 480px) {
+        .modal-card { width: 95%; }
+        .price-new { font-size: 38px; }
+        .modal-footer { flex-direction: column; }
+        .btn { justify-content: center; }
+    }
+</style>
